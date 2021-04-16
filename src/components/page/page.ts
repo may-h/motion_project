@@ -1,5 +1,5 @@
 export class PageComponent {
-    private element: HTMLUListElement; // 카드 목록을 담는다. 
+    private element: HTMLUListElement; // (내부 state) 카드 목록을 담는다. 
 
     constructor() {
         this.element = document.createElement('ul');
