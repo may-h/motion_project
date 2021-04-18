@@ -1,4 +1,4 @@
-import { BaseComponent } from "../../components.js";
+import { BaseComponent } from "../../component.js";
 
 export class TodoComponent extends BaseComponent<HTMLElement> {
     constructor(title: string, todo: string){
