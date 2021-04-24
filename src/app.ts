@@ -1,5 +1,9 @@
 import { Component } from "./components/component.js";
-import { InputDialog, MediaData, TextData } from "./components/dialog/dialog.js";
+import {
+  InputDialog,
+  MediaData,
+  TextData,
+} from "./components/dialog/dialog.js";
 import { MediaSectionInput } from "./components/dialog/input/media-input.js";
 import { TextSectionInput } from "./components/dialog/input/text-input.js";
 import { ImageComponent } from "./components/page/item/image.js";
@@ -58,6 +62,27 @@ class App {
     // const todo = new TodoComponent("Todo Title", "Todo List 1");
     // this.page.addChild(todo);
 
+    // For demo :)
+    this.page.addChild(
+      new ImageComponent("Image Title", "https://picsum.photos/800/400")
+    );
+    this.page.addChild(
+      new VideoComponent("Video Title", "https://youtu.be/D7cwvvA7cP0")
+    );
+    this.page.addChild(
+      new NoteComponent("Note Title", "Don't forget to code your dream")
+    );
+    this.page.addChild(new TodoComponent("Todo Title", "TypeScript Course!"));
+    this.page.addChild(
+      new ImageComponent("Image Title", "https://picsum.photos/800/400")
+    );
+    this.page.addChild(
+      new VideoComponent("Video Title", "https://youtu.be/D7cwvvA7cP0")
+    );
+    this.page.addChild(
+      new NoteComponent("Note Title", "Don't forget to code your dream")
+    );
+    this.page.addChild(new TodoComponent("Todo Title", "TypeScript Course!"));
   }
 
   private bindElementToDialog<T extends (MediaData | TextData) & Component>(

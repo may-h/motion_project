@@ -1,133 +1,137 @@
 :root {
-    --bg-main-color: #000000;
-    --bg-accent-color: #2d2d2d;
-    --accent-color: #88c8ff;
-    --text-accent-color: #ffe498;
-    --text-edit-bg-color: #575757;
-    --border-color: #3f3f3f;
-    --shadow-color: #202020;
-    --document-bg-color: #68686850;
-    --component-bg-gradient: radial-gradient(circle, #646464e6 0%, #363636e6 100%);
-    --smokywhite: #dddbd8;
-    --black: #000000;
-    --translucent-black: #00000099;
-  }
-  
-  li {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  p {
-    color: var(--smokywhite);
-  }
-  
-  label {
-    color: var(--text-accent-color);
-  }
+  --bg-main-color: #000000;
+  --bg-accent-color: #2d2d2d;
+  --accent-color: #88c8ff;
+  --text-accent-color: #ffe498;
+  --text-edit-bg-color: #575757;
+  --border-color: #3f3f3f;
+  --shadow-color: #202020;
+  --document-bg-color: #68686850;
+  --component-bg-gradient: radial-gradient(
+    circle,
+    #646464e6 0%,
+    #363636e6 100%
+  );
+  --smokywhite: #dddbd8;
+  --black: #000000;
+  --translucent-black: #00000099;
+}
 
-  dialog {
-    border: 0;
-  }
+li {
+  list-style: none;
+  padding-left: 0;
+}
 
-  button {
-    background: transparent;
-    border: 0;
-    outline: 0;
-  }
-  
-  input,
-  textarea {
-    background-color: var(--text-edit-bg-color);
-    color: var(--smokywhite);
-    font-size: 1.5em;
-  }
-  
-  * {
-    outline: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: url('../assets/background.png') center/cover no-repeat;
-    font-family: Roboto, Oxygen, sans-serif;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    font-size: 1.25rem;
-    margin: 0;
-  }
+p {
+  color: var(--smokywhite);
+}
+
+label {
+  color: var(--text-accent-color);
+}
+
+dialog {
+  border: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+input,
+textarea {
+  background-color: var(--text-edit-bg-color);
+  color: var(--smokywhite);
+  font-size: 1.5em;
+}
+
+* {
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../assets/background.png") center/cover no-repeat;
+  font-family: Roboto, Oxygen, sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 1.25rem;
+  margin: 0;
+}
 
 .app {
-    width: 100%;
-    max-width: 1000px; /* 너비가 1000px까지만 커지고 이후 유지된다.*/
-    height: 100%;
-    display: flex; 
-    flex-direction: column; /* display를 flex로 주어 한줄에 하나씩 나오도록 설정 */
+  width: 100%;
+  max-width: 1000px; /* 너비가 1000px까지만 커지고 이후 유지된다.*/
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* display를 flex로 주어 한줄에 하나씩 나오도록 설정 */
 }
 
 .banner {
-    background-color: var(--bg-main-color);
-    /* background-color: black; */
-    border-bottom: 1px solid var(--bg-main-color);
-    text-align: center;
+  background-color: var(--bg-main-color);
+  /* background-color: black; */
+  border-bottom: 1px solid var(--bg-main-color);
+  text-align: center;
 }
 
 .banner__title {
-    margin: 20px;
-    color: var(--accent-color);
+  margin: 20px;
+  color: var(--accent-color);
 }
 
 .control-panel {
-    display: flex; /* 버튼이 나란하게 */
-    align-items: center;
-    justify-content: center; /* 버튼 위치 가운데로 */
+  display: flex; /* 버튼이 나란하게 */
+  align-items: center;
+  justify-content: center; /* 버튼 위치 가운데로 */
 }
 
 .create-button,
 .dialog__submit {
-    margin: 0.1em 0.2em; /* 버튼 사이 거리 두기 */
-    text-align: center;
-    user-select: none;
-    padding: 1em 3em; /* 버튼 내부 공백 커짐 */
-    text-transform: uppercase; /* 텍스트 대문자로.. */
-    font-weight: 600;
-    font-size: 0.8rem;
-    color: white;
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    border-radius: 2px;
+  margin: 0.1em 0.2em; /* 버튼 사이 거리 두기 */
+  text-align: center;
+  user-select: none;
+  padding: 1em 3em; /* 버튼 내부 공백 커짐 */
+  text-transform: uppercase; /* 텍스트 대문자로.. */
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: white;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 .document {
-    height: 100%;
-    overflow-y: auto;
-    background-color: var(--document-bg-color);
-    /* Firefox */
-    scrollbar-width: 6px;
-    scrollbar-color: var(--bg-accent-color);
-    scrollbar-face-color: var(--accent-color);
-  }
-  
-  .document::-webkit-scrollbar {
-    /* Safari and Chrome */
-    background-color: var(--bg-accent-color);
-    width: 6px;
-  }
-  
-  .document::-webkit-scrollbar-thumb {
-    /* Safari and Chrome */
-    background-color: var(--accent-color);
-  }
-  
-  .footer {
-    background: var(--bg-main-color);
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-  }
+  height: 100%;
+  overflow-y: auto;
+  background-color: var(--document-bg-color);
+  /* Firefox */
+  scrollbar-width: 6px;
+  scrollbar-color: var(--bg-accent-color);
+  scrollbar-face-color: var(--accent-color);
+}
 
- /* -- Dialog -- */
+.document::-webkit-scrollbar {
+  /* Safari and Chrome */
+  background-color: var(--bg-accent-color);
+  width: 6px;
+}
+
+.document::-webkit-scrollbar-thumb {
+  /* Safari and Chrome */
+  background-color: var(--accent-color);
+}
+
+.footer {
+  background: var(--bg-main-color);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+/* -- Dialog -- */
 .dialog {
   display: flex;
   align-items: center;
@@ -249,4 +253,26 @@
 .todo-label {
   padding: 1em;
   color: var(--smokywhite);
+}
+
+/*--- Drag and Drop --- */
+.mute-children * {
+  pointer-events: none;
+}
+.lifted {
+  animation: drag_start 250ms;
+  opacity: 0.2;
+}
+
+@keyframes drag_start {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.drop-area {
+  border: 2px solid var(--accent-color);
 }
